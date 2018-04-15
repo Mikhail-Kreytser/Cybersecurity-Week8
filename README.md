@@ -29,5 +29,5 @@
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/IDOR.gif "Insecure Direct Object Reference Demo")
 
 ### Cross-Site Request Forgery
-#### Create a website that has a form that posts to red/public/staff/salespeople/edit.php?id=1. When a logged in user goes the the malicious website, the salesperson with id 1 has their information updated.
+#### Create a website that has a form that posts to red/public/staff/salespeople/edit.php?id=1. When a logged in user goes the malicious website, the salesperson with id 1 has their information updated.
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/CSRF.gif "Cross-Site Request Forgery Demo")
