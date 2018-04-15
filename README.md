@@ -30,5 +30,5 @@
 #### Go leave some feedback and inject code. When a logged in user/admin visits the feedback page. The injected code is ran.
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/XSS.gif "Cross-Site Scripting Demo")
 
-### Cross-Site Scripting + Session Hijacking/Fixation Advanced Objective
+### Cross-Site Scripting + Session Hijacking/Fixation = Advanced Objective
 ##### Hypothetically, the malicious code can change the logged in user's PHPSESSID to the attacker's. The code can then refresh the page or redirect to login. The user might think that it was a glitch and login again. By doing that, the attacker's PHPSESSID can now be used to login. The malicious code can also just send the current user's PHPSESSID to the attacker allowing the attacker to use it to login.
