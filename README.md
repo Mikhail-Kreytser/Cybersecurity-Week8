@@ -1,7 +1,7 @@
 # Cybersecurity-Week8
 
 ## Blue
-### SQL Injection
+### SQL Injection + Bonus Objective 1
 #### Use the id parameter in the url to infiltrate the system: /blue/public/staff/salespeople/show.php?id=1 
 #### Explore the Database with sqlmap
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/SQLI.gif "SQLI Demo")
@@ -26,9 +26,9 @@
 #### Go to the main login. If the wrong password is entered and the user exists, the error is bold. If the wrong password is entered and the user does not exist, the error just plain text. 
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/UsernameEnumeration.gif "Username Enumeration Demo")
 
-### Cross-Site Scripting
+### Cross-Site Scripting + Bonus Objective 2
 #### Go leave some feedback and inject code. When a logged in user/admin visits the feedback page. The injected code is ran.
 ![alt text](https://github.com/Mikhail-Kreytser/Cybersecurity-Week8/blob/master/Demo/XSS.gif "Cross-Site Scripting Demo")
 
-### Cross-Site Scripting + Session Hijacking/Fixation
+### Cross-Site Scripting + Session Hijacking/Fixation Advanced Objective
 ##### Hypothetically, the malicious code can change the logged in user's PHPSESSID to the attacker's. The code can then refresh the page or redirect to login. The user might think that it was a glitch and login again. By doing that, the attacker's PHPSESSID can now be used to login. The malicious code can also just send the current user's PHPSESSID to the attacker allowing the attacker to use it to login.
