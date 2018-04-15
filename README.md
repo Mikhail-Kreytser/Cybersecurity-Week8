@@ -47,3 +47,25 @@ Each version of the site has been given two of the six vulnerabilities. (In othe
 
 ### Cross-Site Scripting + Session Hijacking/Fixation = Advanced Objective
 * Hypothetically, the malicious code can change the logged in user's PHPSESSID to the attacker's. The code can then refresh the page or redirect to login. The user might think that it was a glitch and login again. By doing that, the attacker's PHPSESSID can now be used to login. The malicious code can also just send the current user's PHPSESSID to the attacker allowing the attacker to use it to login.
+
+## Concept Review
+* Which attacks were easiest to execute? Which were the most difficult?
+  * SQLI was the easiest with the help of the sqlmap tool. The others attacks were on the same level of difficulty. None of these attacks were too difficult. 
+
+* What is a good rule of thumb which would prevent accidentally username enumeration vulnerabilities like the one created here?
+  * Return the same error string whether the user exists or not 
+  
+* Since you should be somewhat familiar with the CMS and how it was coded, can you think of another resource which could be made vulnerable to an Insecure Direct Object Reference? What code could be removed which would expose it? (Hint: It was also the answer to the first bonus objective to the Weekly Assignment for week 3.)
+  * All the ids in the system follow a consecutive enumeration. If the ids were generated randomly, IDOR would me much harder.
+
+* Many SQL Injections use OR as part of the injected code. (For example: ' OR 1=1 --'.) Could AND work just as well in place of OR? (For example: ' AND 1=1 --'.) Why or why not?
+  * 'AND' is not as powerful as 'OR' when doing SQLI. When using 'AND' both conditions need to be true. On the other hand, with 'OR' only one condition needs to be true. Using something like **BOB'AND'1=1** will only return the row with BOB. However, using something like **BOB'OR'1=1** will everything no matter if the part before the 'OR' is true or not.
+
+* A stored XSS attack requires patience because it could be stored for months before being triggered. Because of this, what important ingredient would an attacker most likely include in a stored XSS attack script?
+  * It is important for the attacker to include a piece of code that can notify them when the xss is triggered. Otherwise, the attacker will never know if his attack worked or even if their code ran.
+
+* Imagine that one of your classmates is an authorized admin for the site's CMS and you are not. How would you get them to visit the self-submitting, hidden form page you created in Objective #5 (CSRF)?
+  * Social Engineering is the biggest flaw. I can always send them a malicious link to a game, book or even, my github. 
+
+* Compare session hijacking and session fixation. Which attack do you think is easier for an attacker to execute? Why? One of them is much easier to defend against than the other. Which one and why?
+  * I would say that session fixation is easier. I think it is easier to implant a cookie then it is to steal an existing one. Session hijacking is much easier to defend against. If an attacker wants to use a stolen cookie, they must use the same user-agent or ip address. Otherwise, the system can flag that login attempt.
